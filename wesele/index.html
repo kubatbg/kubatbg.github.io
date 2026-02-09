@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Karolina i Jakub - Wesele</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="overlay">
+    <h1>Karolina & Jakub</h1>
+    <div id="countdown"></div>
+    <a href="#info" class="btn">Szczegóły</a>
+  </div>
+</header>
+
+<section id="info">
+  <h2>Informacje o wydarzeniu</h2>
+  <p><strong>Data:</strong> 18.06.2027</p>
+  <p><strong>Godzina:</strong> 15:00</p>
+  <p><strong>Miejsce:</strong> Zakrzew-Kolonia 3, 23-155 Zakrzew-Kolonia „W Lawendzie”</p>
+</section>
+
+<section id="map">
+  <h2>Lokalizacja</h2>
+  <iframe
+    src="https://www.google.com/maps?q=Zakrzew-Kolonia%203%2023-155&output=embed"
+    width="100%"
+    height="400"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</section>
+
+<section id="photos">
+  <h2>Zdjęcia</h2>
+  <a href="photos.html" class="btn">Zobacz galerię</a>
+</section>
+
+<footer>
+  <p>Do zobaczenia! ❤️</p>
+</footer>
+
+<script>
+const weddingDate = new Date("2027-06-18T15:00:00").getTime();
+
+const countdown = document.getElementById("countdown");
+
+setInterval(() => {
+  const now = new Date().getTime();
+  const distance = weddingDate - now;
+
+  if (distance < 0) {
+    countdown.innerHTML = "To już dziś!";
+    return;
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  countdown.innerHTML =
+    days + " dni " + hours + " h " + minutes + " m " + seconds + " s";
+}, 1000);
+</script>
+
+</body>
+</html>
