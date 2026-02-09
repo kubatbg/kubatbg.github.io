@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.hero {
+  background: url("https://picsum.photos/1920/1080") center/cover no-repeat;
+  height: 100vh;
+  color: white;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.5);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+#countdown {
+  font-size: 2em;
+  margin: 20px 0;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+.btn {
+  background: #c79a5b;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+footer {
+  background: #222;
+  color: white;
+  padding: 20px;
+}
