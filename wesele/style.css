@@ -5,7 +5,7 @@ body {
 }
 
 .hero {
-  background: url("https://picsum.photos/1920/1080") center/cover no-repeat;
+  background: url("zdjecie-tlo.jpeg") center/cover no-repeat;
   height: 100vh;
   color: white;
   position: relative;
